@@ -1,6 +1,6 @@
 {
   "name": "image-orientational",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "jsnext:source": "./src/index.ts",
   "types": "./dist/types/index.d.ts",
   "main": "./dist/js/node/index.js",
@@ -11,6 +11,8 @@
       "packageMode": "browser-js"
     }
   },
+  "repository": "https://github.com/xue1206/image-orientation.git",
+  "author": "xuebagod <1085523029@qq.com>",
   "scripts": {
     "prepare": "rollup -c rollup.config.js",
     "prepublishOnly": "rollup -c rollup.config.js",

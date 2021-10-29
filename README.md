@@ -2,8 +2,9 @@
 
 > rotate img element
 
-![e.gif](./example/e.gif)
+![e.gif](https://i.ibb.co/0VdZ2mM/e.gif)
 
+[example](https://xue1206.github.io/image-orientation/example/index.html)
 ## Usage
 
 cdn
