@@ -1,44 +1,51 @@
-# Your Package
+# image-orientation
 
-## Prerequisites
+> rotate img element
 
-1. [Node.js LTS](https://github.com/nodejs/Release)
-    * [Automatically call nvm use](https://github.com/nvm-sh/nvm#deeper-shell-integration)
+![e.gif](./example/e.gif)
 
-## Get Started
+## Usage
 
-按开发环境的要求，运行和调试项目
-
-运行和调试组件
-
+cdn
+```html
+<button id="btn">rotate</button>
+    <div id="container" style="border: 1px solid">
+      <div id="wrapper">
+        <img
+          id="image"
+          src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+          alt=""
+        />
+      </div>
+    </div>
 ```
-pnpm run dev
+```javascript
+imageOrientation
+    .createImageOrientation({
+        container,
+        wrapper,
+        image,
+    })
+    .then((instance) => {
+        var angle = 0;
+        btn.onclick = () => {
+            instance.rotate((angle += 90));
+        };
+    });
 ```
 
-运行测试用例
+or use npm package
 
-```
-pnpm run test
-```
-
-按照社区规范和最佳实践，生成构建产物
-
-```
-pnpm run build
-```
-
-继续创建更多项目要素
-
-```
-pnpm run new
+```javascript
+import { createImageOrientation } from 'image-orientation';
+createImageOrientation({
+    container,
+    wrapper,
+    image,
+});
 ```
 
-其他
+## Thanks
 
-```
-pnpm run lint         # 检查和修复所有代码
-pnpm run change       # 添加 changeset，用于发版时生成 changelog
-pnpm run bump         # 生成发版相关的修改，比如更新版本号、生成 changelog
-pnpm run release      # 根据 bump 自动修改和人工修改的发版要求，发布项目
-
-```
+- [modernjs](https://github.com/modern-js-dev/modern.js)
+- [rollup](https://github.com/rollup/rollup)

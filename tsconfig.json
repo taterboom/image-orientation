@@ -1,6 +1,7 @@
 {
   "extends": "@modern-js/tsconfig/base",
   "compilerOptions": {
+    "module": "ESNext",
     "declaration": false,
     "jsx": "preserve",
     "baseUrl": "./",

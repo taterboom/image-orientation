@@ -1,16 +1,21 @@
 {
   "name": "image-orientation",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "jsnext:source": "./src/index.ts",
   "types": "./dist/types/index.d.ts",
   "main": "./dist/js/node/index.js",
   "module": "./dist/js/treeshaking/index.js",
   "jsnext:modern": "./dist/js/modern/index.js",
+  "modernConfig": {
+    "output": {
+      "packageMode": "browser-js"
+    }
+  },
   "scripts": {
-    "prepare": "modern build",
-    "prepublishOnly": "modern build --platform",
+    "prepare": "rollup -c rollup.config",
+    "prepublishOnly": "rollup -c rollup.config",
     "dev": "modern dev",
-    "build": "modern build",
+    "build": "rollup -c rollup.config",
     "reset": "rm -rf node_modules",
     "lint": "modern lint",
     "change": "modern change",
@@ -45,24 +50,38 @@
   },
   "eslintIgnore": [
     "node_modules/",
-    "dist/"
+    "dist/",
+    "lib/",
+    "stories/",
+    "rollup.config.js"
   ],
   "dependencies": {
-    "@babel/runtime": "^7"
+    "@babel/runtime": "^7.15.4",
+    "@rollup/plugin-node-resolve": "^13.0.6"
   },
   "peerDependencies": {
     "react": "^17"
   },
   "devDependencies": {
-    "react": "^17",
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
     "@modern-js/module-tools": "^1.0.0",
     "@modern-js/plugin-jarvis": "^1.0.0",
+    "@modern-js/plugin-storybook": "^1.0.0",
     "@modern-js/plugin-testing": "^1.0.0",
-    "typescript": "^4",
+    "@modern-js/runtime": "1.0.0",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^21.0.1",
     "@types/jest": "^26.0.9",
     "@types/node": "^14",
     "@types/react": "^17",
-    "@types/react-dom": "^17"
+    "@types/react-dom": "^17",
+    "react": "^17",
+    "rollup": "^2.58.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.4"
   },
   "sideEffects": [
     "*.css",
