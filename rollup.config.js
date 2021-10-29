@@ -59,7 +59,7 @@ export default [
   {
     input: 'src/index.ts',
     output: {
-      name: 'imageOrientation',
+      name: 'imageOrientational',
       file: 'lib/index.js',
       format: 'iife',
     },

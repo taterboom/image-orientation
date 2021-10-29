@@ -1,5 +1,5 @@
 {
-  "name": "image-orientation",
+  "name": "image-orientational",
   "version": "1.0.0",
   "jsnext:source": "./src/index.ts",
   "types": "./dist/types/index.d.ts",
@@ -12,10 +12,10 @@
     }
   },
   "scripts": {
-    "prepare": "rollup -c rollup.config",
-    "prepublishOnly": "rollup -c rollup.config",
+    "prepare": "rollup -c rollup.config.js",
+    "prepublishOnly": "rollup -c rollup.config.js",
     "dev": "modern dev",
-    "build": "rollup -c rollup.config",
+    "build": "rollup -c rollup.config.js",
     "reset": "rm -rf node_modules",
     "lint": "modern lint",
     "change": "modern change",

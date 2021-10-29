@@ -1,4 +1,4 @@
-# image-orientation
+# image-orientational
 
 > rotate img element
 
@@ -20,7 +20,7 @@ cdn
     </div>
 ```
 ```javascript
-imageOrientation
+imageOrientational
     .createImageOrientation({
         container,
         wrapper,
@@ -37,7 +37,7 @@ imageOrientation
 or use npm package
 
 ```javascript
-import { createImageOrientation } from 'image-orientation';
+import { createImageOrientation } from 'image-orientational';
 createImageOrientation({
     container,
     wrapper,
